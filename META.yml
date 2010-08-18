@@ -19,5 +19,5 @@ requires:
   URI: 1.36
 resources:
   homepage: http://search.cpan.org/dist/YellowBot-API/
-  repository: git://git.sol/yellowbot-api-perl.git
-version: 0.90
+  repository: http://github.com/solfo/YellowBot-API-perl
+version: 0.91

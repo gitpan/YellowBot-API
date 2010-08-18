@@ -22,5 +22,5 @@ t/pod.t
 t/release-dist-manifest.t
 t/release-distmeta.t
 t/release-has-version.t
-t/release-pod-coverage.t
+t/signin_url.t
 t/thumbs.t

@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     'Moose' => '0',
     'URI' => '1.36'
   },
-  'VERSION' => '0.90',
+  'VERSION' => '0.91',
   'test' => {
     'TESTS' => 't/*.t'
   }

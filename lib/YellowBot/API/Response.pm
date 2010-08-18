@@ -1,6 +1,6 @@
 package YellowBot::API::Response;
 BEGIN {
-  $YellowBot::API::Response::VERSION = '0.90';
+  $YellowBot::API::Response::VERSION = '0.91';
 }
 use Moose;
 use JSON::XS qw(decode_json);
