@@ -14,7 +14,6 @@ lib/YellowBot/API.pm
 lib/YellowBot/API/Request.pm
 lib/YellowBot/API/Response.pm
 t/00-compile.t
-t/00-load.t
 t/basic.t
 t/location_get.t
 t/pod-coverage.t

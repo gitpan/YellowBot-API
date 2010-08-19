@@ -1,6 +1,6 @@
 package YellowBot::API;
 BEGIN {
-  $YellowBot::API::VERSION = '0.91';
+  $YellowBot::API::VERSION = '0.92';
 }
 
 use warnings;

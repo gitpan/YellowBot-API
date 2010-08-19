@@ -1,6 +1,6 @@
 package YellowBot::API::Request;
 BEGIN {
-  $YellowBot::API::Request::VERSION = '0.91';
+  $YellowBot::API::Request::VERSION = '0.92';
 }
 use Moose;
 use URI ();

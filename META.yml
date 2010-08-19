@@ -14,10 +14,13 @@ meta-spec:
   version: 1.4
 name: YellowBot-API
 requires:
+  Digest::SHA: 0
+  JSON: 2.12
   LWP::UserAgent: 0
   Moose: 0
   URI: 1.36
+  namespace::clean: 0
 resources:
   homepage: http://search.cpan.org/dist/YellowBot-API/
   repository: http://github.com/solfo/YellowBot-API-perl
-version: 0.91
+version: 0.92

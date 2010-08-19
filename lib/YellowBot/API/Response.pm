@@ -1,9 +1,9 @@
 package YellowBot::API::Response;
 BEGIN {
-  $YellowBot::API::Response::VERSION = '0.91';
+  $YellowBot::API::Response::VERSION = '0.92';
 }
 use Moose;
-use JSON::XS qw(decode_json);
+use JSON qw(decode_json);
 use namespace::clean -except => 'meta';
 
 has http => (

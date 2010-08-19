@@ -24,11 +24,14 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'YellowBot::API',
   'PREREQ_PM' => {
+    'Digest::SHA' => '0',
+    'JSON' => '2.12',
     'LWP::UserAgent' => '0',
     'Moose' => '0',
-    'URI' => '1.36'
+    'URI' => '1.36',
+    'namespace::clean' => '0'
   },
-  'VERSION' => '0.91',
+  'VERSION' => '0.92',
   'test' => {
     'TESTS' => 't/*.t'
   }
