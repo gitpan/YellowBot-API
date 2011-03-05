@@ -1,5 +1,8 @@
 Revision history for YellowBot-API
 
+0.93   March 5, 2011
+       Support file uploads
+
 0.92   August 18, 2010
        Add missing dependencies
        Use JSON instead of JSON::XS

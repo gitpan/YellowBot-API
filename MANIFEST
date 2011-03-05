@@ -8,7 +8,6 @@ README
 bin/ybapi
 dev_devtest
 dev_prodtest
-dev_video.t
 dist.ini
 lib/YellowBot/API.pm
 lib/YellowBot/API/Request.pm

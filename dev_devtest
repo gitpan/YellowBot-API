@@ -1,10 +1,17 @@
 #!/bin/sh
- PERL5LIB=/Users/ask/src/ypbot/cpan/lib/perl5 \
- /opt/local/bin/perl5.8.9 Makefile.PL 
+
+# PERL5LIB=/Users/ask/src/ypbot/cpan/lib/perl5 \
+# perl Makefile.PL 
 
  PERL5LIB=/Users/ask/src/ypbot/cpan/lib/perl5 \
  API_KEY=a04212b19a1e399c3c60de67b290c6a2 \
  API_SECRET=3b23bb35fec3019a \
  API_SERVER=http://www.yellowbot.com.ask.ypdev.net \
- /opt/local/bin/perl5.8.9 -T -I/Users/ask/src/ypbot/cpan/lib/perl5 -Ilib t/video.t
+ prove5.12.1 -T -I/Users/ask/src/ypbot/cpan/lib/perl5 -Ilib -r t
+
+
+# perl -T -I/Users/ask/src/ypbot/cpan/lib/perl5 -Ilib t/signin_url.t
+
+
+
 

@@ -1,11 +1,11 @@
 package YellowBot::API::Request;
 BEGIN {
-  $YellowBot::API::Request::VERSION = '0.92';
+  $YellowBot::API::Request::VERSION = '0.93';
 }
 use Moose;
 use URI ();
 use Digest::SHA qw(hmac_sha256_hex);
-use HTTP::Request ();
+use HTTP::Request::Common qw(POST);
 use namespace::clean -except => 'meta';
 
 use YellowBot::API::Response;
@@ -23,7 +23,7 @@ has method => (
 );
 
 has args => (
-   isa => 'HashRef[Str]',
+   isa => 'HashRef[Str | ArrayRef[Str | Undef]]',
    is  => 'rw',
 );
 
@@ -35,9 +35,7 @@ sub _query {
     $args{api_ts}  = time;
     $args{api_sig} = hmac_sha256_hex(_get_parameter_string(\%args), $api_secret);
 
-    my $uri = URI->new(); 
-    $uri->query_form( %args );
-    return $uri->query;
+    return %args;
 }
 
 sub http_request {
@@ -45,21 +43,22 @@ sub http_request {
     my $uri = URI->new( $self->api->server );
     $uri->path("/api/" . $self->method );
 
-    my $content = _query
+    my %args = %{ $self->args };
+
+    my %content = _query
       (
-       %{ $self->args },
+       %args,
        api_key    => $self->api->api_key,
        api_secret => $self->api->api_secret,
       );
 
-    my $request = HTTP::Request->new(POST => $uri);
+    my $request = POST( $uri, [ %content ],
+                        'Content-Type' => 'form-data',
+                      );
 
-    $request->header('Content-Type' => 'application/x-www-form-urlencoded');
-    if (defined($content)) {
-        $request->header('Content-Length' => length($content));
-        $request->content($content);
-        warn "YellowBot::API Request Content: $content\n"
-          if $ENV{API_DEBUG};
+    if ($ENV{API_DEBUG}) {
+        require Data::Dumper;
+        warn "YellowBot::API Request: ", Data::Dumper::Dumper($request);
     }
 
     return $request;
