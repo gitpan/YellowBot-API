@@ -1,6 +1,6 @@
 package YellowBot::API::Response;
 BEGIN {
-  $YellowBot::API::Response::VERSION = '0.93';
+  $YellowBot::API::Response::VERSION = '0.94';
 }
 use Moose;
 use JSON qw(decode_json);
@@ -26,6 +26,10 @@ sub _build_data {
                 };
     }
     my $data = decode_json($self->http->content);
+    if ($ENV{API_DEBUG} and $ENV{API_DEBUG} > 2) {
+        warn "JSON response:\n" . $self->http->content . "\n";
+    }
+
     # if return isn't a hashref, then wrap it in one, with 'result' key
     if(ref($data) ne 'HASH') {
         $data = { result => $data };

@@ -1,6 +1,6 @@
 package YellowBot::API::Request;
 BEGIN {
-  $YellowBot::API::Request::VERSION = '0.93';
+  $YellowBot::API::Request::VERSION = '0.94';
 }
 use Moose;
 use URI ();
@@ -81,6 +81,10 @@ __PACKAGE__->meta->make_immutable;
 1;
 
 __END__
+
+=pod
+
+=encoding utf8
 
 =head1 NAME
 

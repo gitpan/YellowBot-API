@@ -1,6 +1,6 @@
 package YellowBot::API;
 BEGIN {
-  $YellowBot::API::VERSION = '0.93';
+  $YellowBot::API::VERSION = '0.94';
 }
 
 use warnings;
@@ -62,15 +62,16 @@ sub call {
 sub signin_url {
     my $self   = shift;
     my %args   = @_;
-    my $domain = $args{domain} ? "http://$args{domain}" : $self->server;
+    my $domain = $args{domain} ? "https://$args{domain}" : $self->server;
     my $uri    = URI->new("$domain/signin/partner");
-    $uri->query(
-        YellowBot::API::Request::_query(
-            %args,
-            api_key    => $self->api_key,
-            api_secret => $self->api_secret,
-        )
+
+    %args = YellowBot::API::Request::_query(
+        %args,
+        api_key    => $self->api_key,
+        api_secret => $self->api_secret,
     );
+
+    $uri->query_form( %args );
     return $uri->as_string;
 }
 

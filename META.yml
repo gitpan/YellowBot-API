@@ -22,5 +22,5 @@ requires:
   namespace::clean: 0
 resources:
   homepage: http://search.cpan.org/dist/YellowBot-API/
-  repository: http://github.com/solfo/YellowBot-API-perl
-version: 0.93
+  repository: http://github.com/abh/YellowBot-API-perl
+version: 0.94
