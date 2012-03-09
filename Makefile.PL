@@ -4,36 +4,37 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'The great new YellowBot::API!',
-  'AUTHOR' => 'Ask Bjørn Hansen <ask@develooper.com>',
-  'BUILD_REQUIRES' => {
-    'Test::More' => '0'
+  "ABSTRACT" => "The great new YellowBot::API!",
+  "AUTHOR" => "Ask Bj\303\270rn Hansen <ask\@develooper.com>",
+  "BUILD_REQUIRES" => {
+    "Test::More" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'YellowBot-API',
-  'EXE_FILES' => [
-    'bin/ybapi'
+  "DISTNAME" => "YellowBot-API",
+  "EXE_FILES" => [
+    "bin/ybapi"
   ],
-  'LICENSE' => 'perl',
-  'NAME' => 'YellowBot::API',
-  'PREREQ_PM' => {
-    'Digest::SHA' => '0',
-    'JSON' => '2.12',
-    'LWP::UserAgent' => '0',
-    'Moose' => '0',
-    'URI' => '1.36',
-    'namespace::clean' => '0'
+  "LICENSE" => "perl",
+  "NAME" => "YellowBot::API",
+  "PREREQ_PM" => {
+    "Digest::SHA" => 0,
+    "JSON" => "2.12",
+    "LWP::UserAgent" => 0,
+    "Moose" => 0,
+    "UNIVERSAL::require" => "0.10",
+    "URI" => "1.36",
+    "namespace::clean" => 0
   },
-  'VERSION' => '0.94',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.96",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

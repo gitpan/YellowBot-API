@@ -9,6 +9,7 @@ bin/ybapi
 dist.ini
 lib/YellowBot/API.pm
 lib/YellowBot/API/Request.pm
+lib/YellowBot/API/Request/JSON.pm
 lib/YellowBot/API/Response.pm
 t/00-compile.t
 t/basic.t

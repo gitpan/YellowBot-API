@@ -5,9 +5,9 @@ author:
 build_requires:
   Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.101670'
+generated_by: 'Dist::Zilla version 4.300009, CPAN::Meta::Converter version 2.120630'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,9 +18,10 @@ requires:
   JSON: 2.12
   LWP::UserAgent: 0
   Moose: 0
+  UNIVERSAL::require: 0.10
   URI: 1.36
   namespace::clean: 0
 resources:
   homepage: http://search.cpan.org/dist/YellowBot-API/
-  repository: http://github.com/abh/YellowBot-API-perl
-version: 0.94
+  repository: git://github.com/solfo/YellowBot-API-perl.git
+version: 0.96
