@@ -1,7 +1,5 @@
 package YellowBot::API::Request;
-{
-  $YellowBot::API::Request::VERSION = '0.96';
-}
+$YellowBot::API::Request::VERSION = '0.97';
 use Moose;
 use URI ();
 use Carp qw(croak);

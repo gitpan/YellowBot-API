@@ -1,7 +1,5 @@
 package YellowBot::API::Response;
-{
-  $YellowBot::API::Response::VERSION = '0.96';
-}
+$YellowBot::API::Response::VERSION = '0.97';
 use Moose;
 use JSON qw(decode_json);
 use namespace::clean -except => 'meta';
@@ -47,6 +45,10 @@ __PACKAGE__->meta->make_immutable;
 
 
 __END__
+
+=pod
+
+=encoding utf8
 
 =head1 NAME
 

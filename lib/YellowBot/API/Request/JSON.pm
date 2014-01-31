@@ -1,8 +1,5 @@
 package YellowBot::API::Request::JSON;
-{
-  $YellowBot::API::Request::JSON::VERSION = '0.96';
-}
-
+$YellowBot::API::Request::JSON::VERSION = '0.97';
 use Moose;
 
 use HTTP::Request;
@@ -61,7 +58,7 @@ __END__
 
 =head1 NAME
 
-YellowBot::API::Request::Json - Request object for YellowBot::API (JSON POST)
+YellowBot::API::Request::JSON - Request object for YellowBot::API (JSON POST)
 
 =head1 SYNOPSIS
 
@@ -70,7 +67,7 @@ This class manages setting up JSON POST requests for the YellowBot::API.
 No user servicable parts inside.  This part of the API is subject to change.
 
 
-    my $req = YellowBot::API::Request::Json->new
+    my $req = YellowBot::API::Request::JSON->new
        (api    => $yellowbot_api,
         method => 'location/detail',
         args   => { foo => 'bar',

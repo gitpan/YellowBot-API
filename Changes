@@ -1,6 +1,7 @@
 Revision history for YellowBot-API
 
-0.96   March 8, 2012
+0.97   Jan 31, 2014
+       Fix pod encoding issues
 
 0.96   February 23, 2012
        Fix signing of file uploads as parameters
